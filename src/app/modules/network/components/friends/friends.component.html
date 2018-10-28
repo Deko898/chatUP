@@ -1,0 +1,14 @@
+<div class="shadow-lg user-wrapper p-3 mb-1 bg-white rounded" *ngFor="let user of users | async" (click)="connect(user._id)">
+  <div class="usrs-container">
+    <div class="users-content">
+      <span>{{user.firstname}}</span>
+      <span>{{user.lastname}}</span>
+    </div>
+    <div>
+      {{user.email}}
+    </div>
+  </div>
+  <div (click)="hideUser()">
+    close
+  </div>
+</div>

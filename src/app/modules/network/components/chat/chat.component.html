@@ -1,0 +1,23 @@
+<div class="chat-container shadow-lg">
+  <div class="chat-wrapper">
+    <div class="messages-wrapper">
+      <div *ngFor="let message of messageList">
+        <app-messages [message]="message"></app-messages>
+      </div>
+    </div>
+
+    <div class="input-wrapper panel-footer">
+      <form #f="ngForm" (ngSubmit)="onChat(f)">
+
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Type your message..." id="message" name="message"
+            autofocus="true" autocomplete="off" ngModel #message="ngModel">
+
+          <span class="input-group-btn">
+            <button type="submit" class="btn btn-primary" name="send">Send</button>
+          </span>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

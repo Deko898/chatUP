@@ -1,0 +1,26 @@
+<form #f="ngForm" (ngSubmit)="onRegister(f)" validate>
+  <div class="form-group">
+    <label for="firstname">Firstname</label>
+    <input type="text" #firstname="ngModel" ngModel name="firstname" class="form-control" id="firstname"
+      aria-describedby="firstnameHelp" placeholder="Enter firstname">
+  </div>
+  <div class="form-group">
+    <label for="lastname">Lastname</label>
+    <input type="text" #lastname="ngModel" ngModel name="lastname" class="form-control" id="lastname" aria-describedby="lastnameHelp"
+      placeholder="Enter lastname">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" #email="ngModel" pattern="{{pattern.email}}" ngModel name="email" class="form-control" id="exampleInputEmail1"
+      aria-describedby="emailHelp" placeholder="Enter email">
+
+    	<span class="input-field-error-note" [hidden]="email.valid || !email.value.length || email.errors?.serverError">You need to type a valid email address</span>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" #password="ngModel" ngModel name="password" class="form-control" id="exampleInputPassword1"
+      placeholder="Password">
+      <span class="input-field-error-note" [hidden]="password.valid || !password.value.length">The password must contain 8-32 characters, at least 1 upper case letter, special character and numeric value.</span>
+  </div>
+  <button class="btn btn-primary">Submit</button>
+</form>

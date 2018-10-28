@@ -1,0 +1,19 @@
+.message
+{
+    background: lightgray;
+    color:black;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
+
+.mine
+{
+    background: blue;
+    color:white;
+    font-size: 14px;
+    margin: 5px 0;
+    padding: 10px 5px;
+    border-radius: 5px;
+}
